@@ -1,0 +1,190 @@
+.genericFlexColunmCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.genericFlexRowCenter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cardapioSection{
+    padding: 9vh 2rem 2rem 2rem;
+    width: 90%;
+    gap: 1rem;
+    margin: 0 auto;
+    color: white;
+    background: -moz-linear-gradient(45deg, hsla(19, 57%, 29%, 1) 0%, hsla(220, 6%, 10%, 1) 100%);
+    background: linear-gradient(45deg, hsla(19, 57%, 29%, 1) 0%, hsla(220, 6%, 10%, 1) 98%);
+}
+
+.mainMenuText{
+    font-size: 2.7rem;
+    font-family: var(--jostfont);
+    color: var(--backGroundColorHero);
+}
+
+.presentationMenuText{
+    font-size: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    font-family: var(--jostfont);
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(45deg, hsla(20, 5%, 34%, 1) 0%, hsla(220, 6%, 10%, 1) 98%);
+
+
+}
+
+.clardapioFlex{
+    width: 100%;
+}
+
+.product{
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-around;
+    padding: 1rem;
+    position: relative;
+}
+
+.product::after{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    bottom: 0;
+    background-color: black;
+
+}
+
+.nameProduct{
+    width: 100%;
+}
+
+.nameProduct h1{
+    font-size: 2rem;
+    font-family: var(--latoFont);
+    font-weight: 900;
+}
+
+.nameProduct p{
+    color: var(--backGroundColorHero);
+    font-family: var(--jostfont);
+    font-size: 1.4rem;
+}
+
+.type{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.type li{
+    font-size: 2rem;
+    padding: .5rem;
+    list-style: none;
+    font-family: var(--jostfont);
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(200deg, hsla(19, 57%, 29%, 1) 0%, hsla(220, 6%, 10%, 1) 98%);
+}
+
+
+.elements{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.elements li{
+    font-size: 1.4rem;
+    list-style: none;
+    font-weight: 900;
+    font-family: var(--jostfont);
+    text-align: center;
+    width: 100%;
+    color: var(--backGroundColorHero);
+    height: auto;
+}
+
+@media screen and (max-width: 480px){
+    .product{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .type li{
+        height: auto;
+        font-size: 1.3rem;
+    }
+
+    .elements{
+        display: none;
+    }
+
+    .presentationMenuText{
+        width: 100%;
+    }
+
+    .mainMenuText{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 481px){
+    .product{
+        display: grid;
+        grid-template-areas: "nameProduct nameProduct" " type elements";
+    }
+
+    .nameProduct{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: nameProduct;
+    }
+
+    .type{
+        grid-area: type;
+    }
+
+    .elements{
+        grid-area: elements;
+    }
+    .elements li{
+        height: auto;
+
+    }
+
+    .type li{
+        height: auto;
+
+    }
+
+}
+
+@media screen and (max-width: 530px){
+    .product{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .elements{
+        display: none;
+    }
+}

@@ -1,0 +1,101 @@
+.navBar{
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-around;
+    z-index: 10;
+    background: linear-gradient(45deg, hsla(31, 100%, 91%, 0.8) 35%, hsla(29, 86%, 52%, 0.8) 100%);
+}
+.navBar .logoDesing{
+    position: relative;
+    display: flex;
+    height: 110%;
+}
+.navBar .logoDesing img{
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+}
+
+.navBar .ulPages{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.navBar .ulPages li{
+    font-family: var(--jostfont);
+    list-style: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--textBrow);
+
+}
+
+.navBar .ulPages li a{
+    text-decoration: none;
+    color: var(--textBrow);
+}
+
+.bodyCover{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    position: relative;
+    background-image: url("../assets//coffeShop.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--textBrow);
+    color: var(--backGroundColorHero);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer h2{
+    font-size: 1rem;
+    font-family: var(--latoFont);
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+footer ul li{
+    height: 100%;
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 480px){
+    .navBar .ulPages{
+        gap: .8rem;
+    }
+
+    .navBar .ulPages li{
+        font-size: .9rem;
+        font-weight: 700;
+    }
+
+    .navBar{
+        justify-content: space-between;
+        padding: .5rem;
+    }
+}
